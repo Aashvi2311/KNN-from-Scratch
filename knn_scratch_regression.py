@@ -41,12 +41,7 @@ for x_test in X_test_arr:
 
     #Take first K neighbors distance -- k smallest distance
     k_neighbors = distances[:k]
-
-    #Majority vote in Classification - Count how many belong to each class and assign with highest majority
-    #class_count = {}
-    #for _,label in k_neighbors:
-    #    class_count[label] = class_count.get(label,0) + 1
-
+    
     #Ignores distance value, finds y target values, finds its sum and divides by number of neighbors
     prediction = sum(y for _, y in k_neighbors)/k
     #prediction_classification = max(class_count,key=class_count.get)
